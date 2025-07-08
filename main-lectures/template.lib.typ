@@ -14,6 +14,10 @@
   set math.equation(numbering: "(1)", supplement: none)
 
   show: equate.with(sub-numbering: false, number-mode: "label")
+  show: shorthands.with(
+    ($>=$, math.gt.eq.slant),
+    ($<=$, math.lt.eq.slant),
+  )
 
   doc
 }
