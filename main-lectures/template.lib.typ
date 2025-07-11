@@ -37,3 +37,17 @@
   #text(18pt)[*#str*]\
   #text(14pt)[_Функциональный анализ, 2025_]
 ]
+
+#let problemlist(title) = doc => {
+  show: formatting
+  set page(background: image(
+    "pictures/troubles-faded.jpg",
+    width: 100%,
+    height: 100%,
+    fit: "stretch"
+  ))
+  set enum(numbering: n => [ #n. ])
+
+  head([ #title ])
+  doc
+}
