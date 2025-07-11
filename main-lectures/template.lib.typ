@@ -27,7 +27,6 @@
     v(1em, weak: true)
     strong(it)
   }
-
   set outline(indent: auto)
 
   doc
