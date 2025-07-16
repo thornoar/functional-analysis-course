@@ -37,15 +37,52 @@
   #text(14pt)[_Функциональный анализ, 2025_]
 ]
 
+#let problem-weights = (
+  (cost: 5, dur: 2),
+  (cost: 13, dur: 7),
+  (cost: 9, dur: 4),
+  (cost: 5, dur: 3),
+  (cost: 7, dur: 4),
+  (cost: 8, dur: 5),
+  (cost: 4, dur: 5),
+  (cost: 6, dur: 7),
+  (cost: 5, dur: 8),
+  (cost: 9, dur: 13),
+  (cost: 9, dur: 14),
+  (cost: 9, dur: 15),
+  (cost: 7, dur: 17),
+  (cost: 9, dur: 17),
+  (cost: 5, dur: 17),
+)
+
+#let hint(content) = box(
+  stroke: 0.5pt,
+  width: 100%,
+  inset: 0.25cm,
+  radius: 0.2cm,
+  content
+)
+
+#let info(n) = [
+  #h(1fr)
+  _(*#problem-weights.at(n - 1).at("cost")* кг., годно в теч. *#problem-weights.at(n - 1).at("dur")* дней)_
+]
+
 #let problemlist(title) = doc => {
   show: formatting
-  set page(background: image(
+  set page(numbering: none, background: image(
     "pictures/troubles-faded.jpg",
     width: 100%,
     height: 100%,
     fit: "stretch"
   ))
-  set enum(numbering: n => [ #n. ])
+  set enum(numbering: n => [
+    #h(-6mm)
+    _(#problem-weights.at(n - 1).at("cost"),
+      #problem-weights.at(n - 1).at("dur"))_
+    #h(1mm)
+    *#n.*
+  ])
 
   head([ #title ])
   doc
