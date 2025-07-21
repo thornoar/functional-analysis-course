@@ -9,7 +9,7 @@
 
 + Пусть $(M, d)$ --- полное непустое метрическое пространство, а $f : M -> RR$ непрерывная функция, ограниченная сверху: $sup f(M) < A < oo$. Покажите, что для любого $epsilon > 0$ найдётся такая точка $x_epsilon in M$, что
   $
-    f(x) <= f(x_epsilon) + d(x_epsilon, x)
+    f(x) <= f(x_epsilon) + epsilon dot d(x_epsilon, x)
   $
   для всех $x in X$. #info(2)
 
