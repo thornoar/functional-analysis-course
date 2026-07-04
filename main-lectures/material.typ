@@ -1,6 +1,6 @@
 #import "@local/common:0.0.0": *
 #import "@local/theorem:0.0.0": *
-#show: theorem
+#show: theorem-rule
 #import "template.lib.typ": *
 #show: formatting
 

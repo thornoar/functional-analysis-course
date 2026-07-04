@@ -1,6 +1,5 @@
 #import "@local/common:0.0.0": *
 #import "@local/theorem:0.0.0": *
-#show: theorem
 #import "template.lib.typ": *
 #show: formatting
 #set enum(numbering: "1.")
